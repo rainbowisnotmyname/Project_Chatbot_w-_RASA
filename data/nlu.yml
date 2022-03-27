@@ -1,0 +1,1264 @@
+version: "3.0"
+
+nlu:
+- intent: greet_th
+  examples: |
+    - สวัสดี
+    - ว่าไง
+    - อรุณสวัสดิ์
+    - โย่
+- intent: goodbye_th
+  examples: |
+    - ไว้เจอกัน
+    - บาย
+- intent: affirm_th
+  examples: |
+    - ช่วยได้เยอะเลย
+    - ขอบคุณนะ
+    - ดีขึ้นเยอะเลย
+- intent: deny_th
+  examples: |
+    - ไม่เลย
+    - ยังเลย
+- intent: mood_great
+  examples: |
+    - วันนี้มันดีสุดๆเลย
+    - โคตรโชคดีเลยวันนี้
+    - ก็ดี
+- intent: mood_unhappy
+  examples: |
+    - ไม่ค่อยโอเท่าไหร่
+    - เฟลๆ นิดนึง
+    - แย่อยู่
+    - ซึมนิดๆ
+- intent: bot_challenge_th
+  examples: |
+    - คุณเป็นใครอะ
+    - คุยกับใครอยู่
+- intent: FAQ
+  examples: |
+    - มีเรื่องจะสอบถาม
+    - มีปัญหา
+- intent: contact
+  examples: |
+    - ติดต่อเจ้าหน้าที่
+    - ติดต่อทางไหนได้บ้างครับ
+- intent: make_will
+  examples: |
+    - ทำพินัยกรรมยัทำพินัยกรรมยังไง
+    - ยกมรดกให้ยังไง
+    - แบ่งมรดกยังไง
+- intent: inherit
+  examples: |
+    - รับมรดกอย่างไร
+    - ไปรับมรดกยังไง
+    - ไปรับมรดกยังไง
+- intent: accident
+  examples: |
+    - ทำงานแล้วนิดขาด
+    - อุบัติเหตุ
+    - แขนขาด
+    - ขาขาด
+    - ตาบอด
+    - หูหาย
+    - หูหนวก
+    - รถชน
+    - พิการ
+- intent: compensation
+  examples: |
+    - ผมจะได้เงินเท่าไหร่
+    - ผมจะได้รับเงินชดเชยเท่าไหร่
+- intent: unknown_ans
+  examples: |
+    - ไม่เข้าใจ
+    - อิหยังวะ
+    - ไม่รู้เรื่องอ่ะ
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: ask_name
+  examples: |
+    - What is your name?
+    - May I know your name?
+    - What do people call you?
+    - Do you have a name for yourself?
+    - Who are you?
+    - May I ask your name?
+- intent: ask_weather
+  examples: |
+    - What's the weather like today?
+    - Does it look sunny outside today?
+    - Oh, do you mind checking the weather for me please?
+- intent: ask_name_th
+  examples: |
+    - คุณชื่ออะไร
+    - ขอทราบชื่อคุณได้ไหม
+    - ให้เรียกคุณว่าอะไร
+    - คุณมีชื่อมั้ย
+- intent: ask_weather_th
+  examples: |
+    - สภาพอากาศวันนี้เป็นยังไง
+    - วันนี้แดดจัดไหม
+    - ช่วยตรวจสอบสภาพอากาศให้ฉันหน่อยได้ไหม
+- intent: ask_favcartoon_th
+  examples: |
+    - ชอบดูการ์ตูนเรื่องไหน
+    - ชอบการ์ตูนอะไร
+    - ชอบดูการ์ตูนอะไร
+    - ชอบอนิเมะเรื่องไหน
+    - มีการ์ตูนที่ชอบมั้ย
+    - มีอนิเมะที่ชอบมั้ย
+- intent: ask_favmovie_th
+  examples: |
+    - มีหนังที่ชอบมั้ย
+    - ชอบดูหนังเรื่องไหน
+    - ชอบภาพยนต์เรื่องอะไร
+    - มีภาพยนต์ที่ชอบไหม
+- intent: ask_favtvseries_th
+  examples: |
+    - ชอบซีรีส์รื่องไหน
+    - มีซีรีส์ที่ชอบดูไหม
+- intent: ask_reccartoon_th
+  examples: |
+    - ไม่รู้จะดูการ์ตูนไรดี
+    - มีการ์ตูนแนะนำมั้ย
+    - มีการ์ตูนไรดูบ้าง
+    - มีอนิเมะแนะนำมั้ย
+    - แนะนำอนิเมะหน่อย
+    - แนะนำการ์ตูนหน่อย
+- intent: ask_recmovie_th
+  examples: |
+    - ไม่รู้จะดูหนังอะไรดี
+    - แนะนำหนังหน่อย
+    - มีหนังไรแนะนำไหม
+    - ไม่รู้จะดูภาพยนต์อะไรดี
+    - แนะนำภาพยนต์หน่อย
+    - มีภาพยนต์ไรแนะนำไหม
+- intent: ask_recseries_th
+  examples: |
+    - มีซีรีย์อะไรแนะนำมั้ยอะ
+    - แนะนำซีรีย์หน่อย
+    - ไม่รู้จะดูซีรีย์ะอไรดี
+- intent: ask_favcartoon
+  examples: |
+    - What's your favourite cartoon?
+    - What cartoon do you like?
+    - What's your favourite anime?
+    - What anime do you like?
+- intent: ask_favmovie
+  examples: |
+    - What's your favourite movie?
+    - What movie do you like?
+- intent: ask_favseries
+  examples: |
+    - What's your favourite TV series
+    - What TV series do you like?
+- intent: whatyoudoin
+  examples: |
+    - What do you do?
+    - What are you doing?
+    - What is your business?
+    - What do you do for a living?
+    - What are you working on?
+- intent: whatyoudoin_th
+  examples: |
+    - คุณทำงานอะไร
+    - คุณทำอาชีพอะไร
+    - คุณประกอบอาชีพอะไร
+    - คุณทำธุรกิจอะไร
+    - คุณทำงานตำแหน่งอะไร
+- intent: accomodation_enquiry
+  examples: |
+    - Where is the nearest hotel ?
+    - is there a hotel near by ?
+    - Where i fit crash for here ?
+    - i want to get to a hotel
+    - i need to get to a hotel
+    - where can i spend the night ?
+- intent: accomodation_enquiry_th
+  examples: |
+    - โรงแรมที่ใกล้ที่สุดคือโรงแรงอะไร
+    - แถวนี้มีที่พักมั้ย
+    - ฉันจะพักที่ไหนได้บ้างคืนนี้
+    - โรงแรมเออยู่ที่ไหน
+- intent: restaurant_enquiry
+  examples: |
+    - i need to get food
+    - i am hungry
+    - is there a restaurant?
+    - where is the restaurant?
+    - where can i get water
+    - where i fit buy food for here?
+    - is there a food court nearby?
+    - where they sell food?
+    - where can i eat
+    - i need to eat
+    - where can i buy snacks?
+    - i want to buy food
+- intent: restaurant_enquiry_th
+  examples: |
+    - ฉันหิวข้าวมาก
+    - ฉันอยากกินข้าวแล้ว
+    - แถวนี้มีร้านอาหารไหม
+    - ร้านอาหารอยู่ไหน
+    - มีร้านขนมหรือของกินแถวนี้ปะ
+    - โซนของกินอยู่ตรงไหน
+    
+# - intent: fav_movie
+#   examples: |
+#     - i like [Eternals](movies)
+#     - [No Time to Die](movies) is my fav movies
+#     - i think [Detective Chinatown 3](movies) is the best movie for me.
+
+# - lookup: country_th
+#   examples: |
+#     - กรีซ
+#     - กรีนแลนด์
+#     - กวม
+#     - กัมพูชา
+#     - กัวเดอลุป
+#     - กัวเตมาลา
+#     - กาตาร์
+#     - กานา
+#     - กาบอง
+#     - กาบูเวร์ดี
+#     - กายอานา
+#     - กินี
+#     - กินี-บิสเซา
+#     - กือราเซา
+#     - เกรเนดา
+#     - เกาหลีใต้
+#     - เกาหลีเหนือ
+#     - เกาะคริสต์มาส
+#     - เกาะเซาท์จอร์เจียและหมู่เกาะเซาท์แซนด์วิช
+#     - เกาะเซาท์จอร์เจียและหมู่เกาะเซาท์แซนด์วิช
+#     - เกาะนอร์ฟอล์ก
+#     - เกาะบูเวต์
+#     - เกาะเล็กรอบนอกของสหรัฐอเมริกา
+#     - เกาะเฮิร์ดและหมู่เกาะแมกดอนัลด์
+#     - เกิร์นซีย์
+#     - แกมเบีย
+#     - โกตดิวัวร์
+#     - คอโมโรส
+#     - คอสตาริกา
+#     - คาซัคสถาน
+#     - คิริบาส
+#     - คิวบา
+#     - คีร์กีซสถาน
+#     - คูเวต
+#     - เคนยา
+#     - แคนาดา
+#     - แคเมอรูน
+#     - โครเอเชีย
+#     - โคลอมเบีย
+#     - จอร์เจีย
+#     - จอร์แดน
+#     - จาเมกา
+#     - จิบูตี
+#     - จีน
+#     - เจอร์ซีย์
+#     - ชาด
+#     - ชิลี
+#     - เช็กเกีย
+#     - ซานมารีโน
+#     - ซามัว
+#     - ซาอุดีอาระเบีย
+#     - ซาฮาราตะวันตก
+#     - ซิมบับเว
+#     - ซีเรีย
+#     - ซูดาน
+#     - ซูรินาม
+#     - เซเชลส์
+#     - เซนต์คิตส์และเนวิส
+#     - เซนต์ลูเชีย
+#     - เซนต์วินเซนต์และเกรนาดีนส์
+#     - เซนต์เฮเลนา
+#     - เซเนกัล
+#     - เซอร์เบีย
+#     - เซาตูเมและปรินซีปี
+#     - เซียร์ราลีโอน
+#     - แซงบาร์เตเลมี
+#     - แซงปีแยร์และมีเกอลง
+#     - แซงมาร์แตง
+#     - แซมเบีย
+#     - โซมาเลีย
+#     - ไซปรัส
+#     - ญี่ปุ่น
+#     - ดอมินีกา
+#     - เดนมาร์ก
+#     - ตรินิแดดและโตเบโก
+#     - ตองงา
+#     - ติมอร์-เลสเต
+#     - ตุรกี
+#     - ตูนิเซีย
+#     - ตูวาลู
+#     - เติร์กเมนิสถาน
+#     - โตโก
+#     - ไต้หวัน
+#     - ทาจิกิสถาน
+#     - แทนซาเนีย
+#     - โทเคอเลา
+#     - ไทย
+#     - นครรัฐวาติกัน
+#     - นอร์เวย์
+#     - นามิเบีย
+#     - นาอูรู
+#     - นิการากัว
+#     - นิวแคลิโดเนีย
+#     - นิวซีแลนด์
+#     - นีวเว
+#     - เนเธอร์แลนด์
+#     - เนปาล
+#     - ไนจีเรีย
+#     - ไนเจอร์
+#     - บราซิล
+#     - บริติชอินเดียนโอเชียนเทร์ริทอรี
+#     - บรูไน
+#     - บอตสวานา
+#     - บอสเนียและเฮอร์เซโกวีนา
+#     - บังกลาเทศ
+#     - บัลแกเรีย
+#     - บาร์เบโดส
+#     - บาห์เรน
+#     - บาฮามาส
+#     - บุรุนดี
+#     - บูร์กินาฟาโซ
+#     - เบนิน
+#     - เบลเยียม
+#     - เบลารุส
+#     - เบลีซ
+#     - เบอร์มิวดา
+#     - โบลิเวีย
+#     - ปวยร์โตรีโก
+#     - ปากีสถาน
+#     - ปานามา
+#     - ปาปัวนิวกินี
+#     - ปารากวัย
+#     - ปาเลสไตน์
+#     - ปาเลา
+#     - เปรู
+#     - โปรตุเกส
+#     - โปแลนด์
+#     - ฝรั่งเศส
+#     - พม่า
+#     - ฟินแลนด์
+#     - ฟิลิปปินส์
+#     - ฟีจี
+#     - เฟรนช์เกียนา
+#     - เฟรนช์เซาเทิร์นและแอนตาร์กติกแลนดส์
+#     - เฟรนช์พอลินีเชีย
+#     - ภูฏาน
+#     - มองโกเลีย
+#     - มอนต์เซอร์รัต
+#     - มอนเตเนโกร
+#     - มอริเชียส
+#     - มอริเตเนีย
+#     - มอลโดวา
+#     - มอลตา
+#     - มัลดีฟส์
+#     - มาเก๊า
+#     - นอร์ทมาซิโดเนีย
+#     - มาดากัสการ์
+#     - มายอต
+#     - มาร์ตีนิก
+#     - มาลาวี
+#     - มาลี
+#     - มาเลเซีย
+#     - เม็กซิโก
+#     - โมซัมบิก
+#     - โมนาโก
+#     - โมร็อกโก
+#     - ไมโครนีเซีย
+#     - ยิบรอลตาร์
+#     - ยูกันดา
+#     - ยูเครน
+#     - เยเมน
+#     - เยอรมนี
+#     - รวันดา
+#     - รัสเซีย
+#     - เรอูว์นียง
+#     - โรมาเนีย
+#     - ลักเซมเบิร์ก
+#     - ลัตเวีย
+#     - ลาว
+#     - ลิกเตนสไตน์
+#     - ลิทัวเนีย
+#     - ลิเบีย
+#     - เลโซโท
+#     - เลบานอน
+#     - ไลบีเรีย
+#     - วานูวาตู
+#     - วาลิสและฟูตูนา
+#     - เวเนซุเอลา
+#     - เวียดนาม
+#     - ศรีลังกา
+#     - สเปน
+#     - สโลวาเกีย
+#     - สโลวีเนีย
+#     - สวาซิแลนด์
+#     - สวิตเซอร์แลนด์
+#     - สวีเดน
+#     - สหรัฐ
+#     - สหรัฐอาหรับเอมิเรตส์
+#     - สหราชอาณาจักร
+#     - สาธารณรัฐคองโก
+#     - สาธารณรัฐโดมินิกัน
+#     - สาธารณรัฐประชาธิปไตยคองโก
+#     - สาธารณรัฐแอฟริกากลาง
+#     - สิงคโปร์
+#     - หมู่เกาะคุก
+#     - หมู่เกาะเคย์แมน
+#     - หมู่เกาะโคโคส
+#     - หมู่เกาะโซโลมอน
+#     - หมู่เกาะเติกส์และเคคอส
+#     - หมู่เกาะนอร์เทิร์นมาเรียนา
+#     - หมู่เกาะบริติชเวอร์จิน
+#     - หมู่เกาะพิตแคร์น
+#     - หมู่เกาะฟอล์กแลนด์
+#     - หมู่เกาะแฟโร
+#     - หมู่เกาะมาร์แชลล์
+#     - หมู่เกาะเวอร์จินของสหรัฐอเมริกา
+#     - หมู่เกาะโอลันด์
+#     - อเมริกันซามัว
+#     - ออสเตรเลีย
+#     - ออสเตรีย
+#     - อันดอร์รา
+#     - อัฟกานิสถาน
+#     - อาเซอร์ไบจาน
+#     - อาร์เจนตินา
+#     - อาร์มีเนีย
+#     - อารูบา
+#     - อิเควทอเรียลกินี
+#     - อิตาลี
+#     - อินเดีย
+#     - อินโดนีเซีย
+#     - อิรัก
+#     - อิสราเอล
+#     - อิหร่าน
+#     - อียิปต์
+#     - อุซเบกิสถาน
+#     - อุรุกวัย
+#     - เอกวาดอร์
+#     - เอธิโอเปีย
+#     - เอริเทรีย
+#     - เอลซัลวาดอร์
+#     - เอสโตเนีย
+#     - แองกวิลลา
+#     - แองโกลา
+#     - แอนตาร์กติกา
+#     - แอนติกาและบาร์บูดา
+#     - แอฟริกาใต้
+#     - แอลจีเรีย
+#     - แอลเบเนีย
+#     - โอมาน
+#     - ไอซ์แลนด์
+#     - ไอร์แลนด์
+#     - ไอล์ออฟแมน
+#     - ฮ่องกง
+#     - ฮอนดูรัส
+#     - ฮังการี
+#     - เฮติ
+#     - ซินต์มาร์เติน
+#     - เนเธอร์แลนด์แคริบเบียน
+#     - สฟาลบาร์และยานไมเอน
+# - lookup: country
+#   examples: |
+#     - Greece
+#     - Greenland
+#     - Guam
+#     - Cambodia
+#     - Guadeloupe
+#     - Guatemala
+#     - Qatar
+#     - Ghana
+#     - Gabon
+#     - Cabo Verde
+#     - Guyana
+#     - Guinea
+#     - Guinea-Bissau
+#     - Curaçao
+#     - Grenada
+#     - South Korea
+#     - North Korea
+#     - Christmas Island
+#     - South Georgia and the South Sandwich Islands
+#     - South Sudan
+#     - Norfolk Island
+#     - Bouvet Island
+#     - United States Minor Outlying Islands
+#     - Heard Island and McDonald Islands
+#     - Guernsey
+#     - Gambia
+#     - Côte d'Ivoire
+#     - Comoros
+#     - Costa Rica
+#     - Kazakhstan
+#     - Kiribati
+#     - Cuba
+#     - Kyrgyzstan
+#     - Kuwait
+#     - Kenya
+#     - Canada
+#     - Cameroon
+#     - Croatia
+#     - Colombia
+#     - Georgia
+#     - Jordan
+#     - Jamaica
+#     - Djibouti
+#     - China
+#     - Jersey
+#     - Chad
+#     - Chile
+#     - Czech Republic
+#     - San Marino
+#     - Samoa
+#     - Saudi Arabia
+#     - Western Sahara
+#     - Zimbabwe
+#     - Syrian Arab Republic
+#     - Sudan
+#     - Suriname
+#     - Seychelles
+#     - Saint Kitts and Nevis
+#     - Saint Lucia
+#     - Saint Vincent and the Grenadines
+#     - Saint Helena, Ascension and Tristan da Cunha
+#     - Senegal
+#     - Serbia
+#     - Sao Tome and Principe
+#     - Sierra Leone
+#     - Saint Barthélemy
+#     - Saint Pierre and Miquelon
+#     - Saint Martin
+#     - Zambia
+#     - Somalia
+#     - Cyprus
+#     - Japan
+#     - Dominica
+#     - Denmark
+#     - Trinidad and Tobago
+#     - Tonga
+#     - Timor-Leste
+#     - Turkey
+#     - Tunisia
+#     - Tuvalu
+#     - Turkmenistan
+#     - Togo
+#     - Taiwan
+#     - Tajikistan
+#     - Tanzania
+#     - Tokelau
+#     - Thailand
+#     - Vatican City State
+#     - Norway
+#     - Namibia
+#     - Nauru
+#     - Nicaragua
+#     - New Caledonia
+#     - New Zealand
+#     - Niue
+#     - Netherlands
+#     - Nepal
+#     - Nigeria
+#     - Niger
+#     - Brazil
+#     - British Indian Ocean Territory
+#     - Brunei Darussalam
+#     - Botswana
+#     - Bosnia and Herzegovina
+#     - Bangladesh
+#     - Bulgaria
+#     - Barbados
+#     - Bahrain
+#     - Bahamas
+#     - Burundi
+#     - Burkina Faso
+#     - Benin
+#     - Belgium
+#     - Belarus
+#     - Belize
+#     - Bermuda
+#     - Bolivia
+#     - Puerto Rico
+#     - Pakistan
+#     - Panama
+#     - Papua New Guinea
+#     - Paraguay
+#     - Palestine
+#     - Palau
+#     - Peru
+#     - Portugal
+#     - Poland
+#     - France
+#     - Myanmar
+#     - Finland
+#     - Philippines
+#     - Fiji
+#     - French Guiana
+#     - French Southern Territories
+#     - French Polynesia
+#     - Bhutan
+#     - Mongolia
+#     - Montserrat
+#     - Montenegro
+#     - Mauritius
+#     - Mauritania
+#     - Moldova
+#     - Malta
+#     - Maldives
+#     - Macao
+#     - North Macedonia
+#     - Madagascar
+#     - Mayotte
+#     - Martinique
+#     - Malawi
+#     - Mali
+#     - Malaysia
+#     - Mexico
+#     - Mozambique
+#     - Monaco
+#     - Morocco
+#     - Micronesia
+#     - Gibraltar
+#     - Uganda
+#     - Ukraine
+#     - Yemen
+#     - Germany
+#     - Rwanda
+#     - Russian Federation
+#     - Réunion
+#     - Romania
+#     - Luxembourg
+#     - Latvia
+#     - Laos
+#     - Liechtenstein
+#     - Lithuania
+#     - Libya
+#     - Lesotho
+#     - Lebanon
+#     - Liberia
+#     - Vanuatu
+#     - Wallis and Futuna
+#     - Venezuela
+#     - Vietnam
+#     - Sri Lanka
+#     - Spain
+#     - Slovakia
+#     - Slovenia
+#     - Swaziland
+#     - Switzerland
+#     - Sweden
+#     - United States of America
+#     - United Arab Emirates
+#     - United Kingdom of Great Britain and Northern Ireland
+#     - Republic of the Congo
+#     - Dominican Republic
+#     - Democratic Republic of the Congo
+#     - Central African Republic
+#     - Singapore
+#     - Cook Islands
+#     - Cayman Islands
+#     - Cocos (Keeling) Islands
+#     - Solomon Islands
+#     - Turks and Caicos Islands
+#     - Northern Mariana Islands
+#     - British Virgin Islands
+#     - Pitcairn
+#     - Falkland Islands
+#     - Faroe Islands
+#     - Marshall Islands
+#     - United States Virgin Islands
+#     - Åland Islands
+#     - American Samoa
+#     - Australia
+#     - Austria
+#     - Andorra
+#     - Afghanistan
+#     - Azerbaijan
+#     - Argentina
+#     - Armenia
+#     - Aruba
+#     - Equatorial Guinea
+#     - Italy
+#     - India
+#     - Indonesia
+#     - Iraq
+#     - Israel
+#     - Iran
+#     - Egypt
+#     - Uzbekistan
+#     - Uruguay
+#     - Ecuador
+#     - Ethiopia
+#     - Eritrea
+#     - El Salvador
+#     - Estonia
+#     - Anguilla
+#     - Angola
+#     - Antarctica
+#     - Antigua and Barbuda
+#     - South Africa
+#     - Algeria
+#     - Albania
+#     - Oman
+#     - Iceland
+#     - Ireland
+#     - Isle of Man
+#     - Hong Kong
+#     - Honduras
+#     - Hungary
+#     - Haiti
+#     - Sint Maarten
+#     - Bonaire, Sint Eustatius and Saba
+#     - Svalbard and Jan Mayen
+# - lookup: capitalcities
+#   examples: |
+#     - Phnom Penh
+#     - Doha
+#     - Seoul
+#     - Pyongyang
+#     - Nur-Sultan
+#     - Bishkek
+#     - Kuwait City
+#     - Tbilisi
+#     - Amman
+#     - Beijing
+#     - Riyadh
+#     - Damascus
+#     - Nicosia
+#     - Tokyo
+#     - Dili
+#     - Ankara
+#     - Ashgabat
+#     - Dushanbe
+#     - Bangkok
+#     - Kathmandu
+#     - Bandar Seri Begawan
+#     - Dhaka
+#     - Manama
+#     - Islamabad
+#     - Jerusalem
+#     - Nay Pyi Taw
+#     - Manila
+#     - Thimphu
+#     - Ulan Bator
+#     - Malé
+#     - Kuala Lumpur
+#     - Sana'a
+#     - Vientiane
+#     - Beirut
+#     - Hanoi
+#     - Sri Jayawardenepura Kotte
+#     - Abu Dhabi
+#     - Singapore
+#     - Kabul
+#     - Baku
+#     - Yerevan
+#     - New Delhi
+#     - Jakarta
+#     - Baghdad
+#     - Jerusalem
+#     - Tehran
+#     - Tashkent
+#     - Muscat
+#     - Tarawa
+#     - Apia
+#     - Nukuʻalofa
+#     - Funafuti
+#     - –
+#     - Wellington
+#     - Port Moresby
+#     - Ngerulmud
+#     - Suva
+#     - Palikir
+#     - Port Vila
+#     - Honiara
+#     - Majuro
+#     - Canberra
+#     - Athens
+#     - Pristina
+#     - Zagreb
+#     - Prague
+#     - San Marino
+#     - Belgrade
+#     - Copenhagen
+#     - Vatican
+#     - Oslo
+#     - Amsterdam
+#     - Sarajevo
+#     - Sofia
+#     - Brussels
+#     - Minsk
+#     - Lisbon
+#     - Warsaw
+#     - Paris
+#     - Helsinki
+#     - Podgorica
+#     - Chișinău
+#     - Valletta
+#     - Skopje
+#     - Monaco
+#     - Kiev
+#     - Berlin
+#     - Moscow
+#     - Bucharest
+#     - Luxembourg
+#     - Riga
+#     - Vilnius
+#     - Vaduz
+#     - Madrid
+#     - Bratislava
+#     - Ljubljana
+#     - Bern
+#     - Stockholm
+#     - London
+#     - Vienna
+#     - Andorra la Vella
+#     - Rome
+#     - Tallinn
+#     - Tirana
+#     - Reykjavík
+#     - Dublin
+#     - Budapest
+#     - Accra
+#     - Libreville
+#     - Praia
+#     - Conakry
+#     - Bissau
+#     - Banjul
+#     - Yamoussoukro
+#     - Moroni
+#     - Nairobi
+#     - Yaoundé
+#     - Djibouti
+#     - N’Djamena
+#     - Harare
+#     - Khartoum
+#     - Juba
+#     - Victoria
+#     - Dakar
+#     - São Tomé
+#     - Freetown
+#     - Lusaka
+#     - Mogadishu
+#     - Tunis
+#     - Lomé
+#     - Dodoma
+#     - Windhoek
+#     - Abuja
+#     - Niamey
+#     - Gaborone
+#     - Gitega
+#     - Ouagadougou
+#     - Porto-Novo
+#     - Port Louis
+#     - Nouakchott
+#     - Antananarivo
+#     - Lilongwe
+#     - Bamako
+#     - Maputo
+#     - Rabat
+#     - Kampala
+#     - Kigali
+#     - Tripoli
+#     - Maseru
+#     - Monrovia
+#     - Brazzaville
+#     - Kinshasa
+#     - Bangui
+#     - Malabo
+#     - Cairo
+#     - Addis Ababa
+#     - Asmara
+#     - Mbabane
+#     - Luanda
+#     - Pretoria
+#     - Algiers
+#     - Saint George’s
+#     - Guatemala City
+#     - San José
+#     - Havana
+#     - Ottawa
+#     - Kingston
+#     - Basseterre
+#     - Castries
+#     - Kingstown
+#     - Roseau
+#     - Managua
+#     - Bridgetown
+#     - Nassau
+#     - Belmopan
+#     - Panama City
+#     - Mexico City
+#     - Washington, D.C.
+#     - Santo Domingo
+#     - San Salvador
+#     - Saint John’s
+#     - Tegucigalpa
+#     - Port-au-Prince
+#     - Georgetown
+#     - Bogotá
+#     - Santiago
+#     - Paramaribo
+#     - Port of Spain
+#     - Brasília
+#     - Sucre
+#     - Asunción
+#     - Lima
+#     - Caracas
+#     - Buenos Aires
+#     - Montevideo
+#     - Quito
+#     - Tskhinvali
+#     - Hargeisa
+#     - Taipei
+#     - Tiraspol
+#     - North Nicosia
+#     - Stepanakert
+#     - Donetsk
+#     - Luhansk
+#     - El Aaiún
+#     - Sukhumi
+# - lookup: capitalcities_th
+#   examples: |
+#     - พนมเปญ
+#     - โดฮา
+#     - โซล
+#     - เปียงยาง
+#     - นูร์-ซุลตัน
+#     - บิชเคก
+#     - คูเวตซิตี
+#     - ทบิลีซี
+#     - อัมมาน
+#     - ปักกิ่ง
+#     - รียาด
+#     - ดามัสกัส
+#     - นิโคเซีย
+#     - โตเกียว
+#     - ดิลี
+#     - อังการา
+#     - อาชกาบัต
+#     - ดูชานเบ
+#     - กรุงเทพมหานคร
+#     - กาฐมาณฑุ
+#     - บันดาร์เซอรีเบอกาวัน
+#     - ธากา
+#     - มานามา
+#     - อิสลามาบาด
+#     - เยรูซาเลม
+#     - เนปยีดอ
+#     - มะนิลา
+#     - ทิมพู
+#     - อูลานบาตาร์
+#     - มาเล
+#     - กัวลาลัมเปอร์
+#     - ซานา
+#     - เวียงจันทน์
+#     - เบรุต
+#     - ฮานอย
+#     - ศรีชยวรรธนปุระโกฏเฏ
+#     - อาบูดาบี
+#     - สิงคโปร์
+#     - คาบูล
+#     - บากู
+#     - เยเรวาน
+#     - นิวเดลี
+#     - จาการ์ตา
+#     - แบกแดด
+#     - เยรูซาเลม
+#     - เตหะราน
+#     - ทาชเคนต์
+#     - มัสกัต
+#     - ตาราวา
+#     - อาปีอา
+#     - นูกูอาโลฟา
+#     - ฟูนาฟูตี
+#     - เวลลิงตัน
+#     - พอร์ตมอร์สบี
+#     - เงรุลมุด
+#     - ซูวา
+#     - ปาลีกีร์
+#     - พอร์ตวิลา
+#     - โฮนีอารา
+#     - มาจูโร
+#     - แคนเบอร์รา
+#     - เอเธนส์
+#     - พริสตีนา
+#     - ซาเกร็บ
+#     - ปราก
+#     - ซานมารีโน
+#     - เบลเกรด
+#     - โคเปนเฮเกน
+#     - ออสโล
+#     - อัมสเตอร์ดัม
+#     - ซาราเยโว
+#     - โซเฟีย
+#     - บรัสเซลส์
+#     - มินสค์
+#     - ลิสบอน
+#     - วอร์ซอ
+#     - ปารีส
+#     - เฮลซิงกิ
+#     - พอดกอรีตซา
+#     - คีชีเนา
+#     - วัลเลตตา
+#     - สกอเปีย
+#     - เคียฟ
+#     - เบอร์ลิน
+#     - มอสโก
+#     - บูคาเรสต์
+#     - ลักเซมเบิร์ก
+#     - รีกา
+#     - วิลนีอัส
+#     - วาดุซ
+#     - มาดริด
+#     - บราติสลาวา
+#     - ลูบลิยานา
+#     - แบร์น
+#     - สต็อกโฮล์ม
+#     - ลอนดอน
+#     - เวียนนา
+#     - อันดอร์ราลาเวยา
+#     - โรม
+#     - ทาลลินน์
+#     - ติรานา
+#     - เรคยาวิก
+#     - ดับลิน
+#     - บูดาเปสต์
+#     - อักกรา
+#     - ลีเบรอวีล
+#     - ไปรยา
+#     - โคนาครี
+#     - บิสเซา
+#     - บันจูล
+#     - ยามูซูโกร
+#     - โมโรนี
+#     - ไนโรบี
+#     - ยาอุนเด
+#     - จิบูตี
+#     - อึนจาเมนา
+#     - ฮาราเร
+#     - คาร์ทูม
+#     - จูบา
+#     - วิกทอเรีย
+#     - ดาการ์
+#     - เซาตูแม
+#     - ฟรีทาวน์
+#     - ลูซากา
+#     - โมกาดิชู
+#     - ตูนิส
+#     - โลเม
+#     - โดโดมา
+#     - วินด์ฮุก
+#     - อาบูจา
+#     - นีอาเม
+#     - กาโบโรเน
+#     - กีเตกา
+#     - วากาดูกู
+#     - ปอร์โต-โนโว
+#     - พอร์ตลูอิส
+#     - นูอากช็อต
+#     - อันตานานารีโว
+#     - ลิลองเว
+#     - บามาโก
+#     - มาปูตู
+#     - ราบัต
+#     - กัมปาลา
+#     - คิกาลี
+#     - ตริโปลี
+#     - มาเซรู
+#     - มอนโรเวีย
+#     - บราซาวีล
+#     - กินชาซา
+#     - บังกี
+#     - มาลาโบ
+#     - ไคโร
+#     - อาดดิสอาบาบา
+#     - แอสมารา
+#     - อึมบาบานี
+#     - ลูอันดา
+#     - พริทอเรีย
+#     - แอลเจียร์
+#     - เซนต์จอร์เจส
+#     - กัวเตมาลาซิตี
+#     - ซานโฮเซ
+#     - อาบานา
+#     - ออตตาวา
+#     - คิงส์ตัน
+#     - บาสแตร์
+#     - แคสตรีส์
+#     - คิงส์ทาวน์
+#     - โรโซ
+#     - มานากัว
+#     - บริดจ์ทาวน์
+#     - แนสซอ
+#     - เบลโมแพน
+#     - ปานามาซิตี
+#     - เม็กซิโกซิตี
+#     - วอชิงตัน ดี.ซี.
+#     - ซานโตโดมิงโก
+#     - ซานซัลวาดอร์
+#     - เซนต์จอนส์
+#     - เตกูซิกัลปา
+#     - ปอร์โตแปรงซ์
+#     - จอร์จทาวน์
+#     - โบโกตา
+#     - ซันติอาโก
+#     - ปารามาริโบ
+#     - พอร์ตออฟสเปน
+#     - บราซิเลีย
+#     - ซูเกร
+#     - อาซุนซิออน
+#     - ลิมา
+#     - การากัส
+#     - บัวโนสไอเรส
+#     - มอนเตวิเดโอ
+#     - กีโต
+#     - สคินวาลี
+#     - ฮาร์เกย์ซา
+#     - ไทเป
+#     - ตีรัสปอล
+#     - นอร์ทนิโคเซีย
+#     - สเตพานาแกร์ต
+#     - ดอแนตสก์
+#     - ลูฮันสก์
+#     - เอลอาอายุน
+#     - ซูฮูมี
+# - lookup: weekdays
+#   examples: |
+#     - Sunday
+#     - Monday
+#     - Tuesday
+#     - Wednesday
+#     - Thursday
+#     - Friday
+#     - Saturday
+# - lookup: weekdays_th
+#   examples: |
+#     - วันอาทิตย์
+#     - วันจันทร์
+#     - วันอังคาร
+#     - วันพุธ
+#     - วันพฤหัสบดี
+#     - วันศุกร์
+#     - วันเสาร์
+# - lookup: months
+#   examples: |
+#     - January
+#     - February
+#     - March
+#     - April
+#     - May
+#     - June
+#     - July
+#     - August
+#     - September
+#     - October
+#     - November
+#     - December
+# - lookup: months_th
+#   examples: |
+#     - มกราคม
+#     - กุมภาพันธ์
+#     - มีนาคม
+#     - เมษายน
+#     - พฤษภาคม
+#     - มิถุนายน
+#     - กรกฎาคม
+#     - สิงหาคม
+#     - กันยายน
+#     - ตุลาคม
+#     - พฤศจิกายน
+#     - ธันวาคม
+# - lookup: faculties
+#   examples: |
+#     - Faculty of Engineering
+#     - Faculty of Architecture
+#     - School of Industrial Education and Technology
+#     - School of Agricultural Technology
+#     - Faculty of Science
+#     - Faculty of Information Technology
+#     - Faculty of Food Industry
+#     - Business School
+#     - FACULTY OF LIBERAL ARTS
+#     - Faculty of Mudecine
+# - lookup: faculties_th
+#   examples: |
+#     - คณะวิศวกรรมศาสตร์
+#     - คณะสถาปัตยกรรม
+#     - คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี
+#     - คณะเทคโลยีการเกษตร
+#     - คณะวิทยาศาสตร์
+#     - คณะเทคโนโลยีสารสนเทศ
+#     - คณะอุตสาหกรรมอาหาร
+#     - คณะบริหารธุรกิจ
+#     - คณะศิลปศาสตร์
+#     - คณะแพทยศาสตร์
+# - lookup: movies
+#   examples: |
+#     - Spider-Man: No Way Home
+#     - The Battle at Lake Changjin
+#     - No Time to Die
+#     - Detective Chinatown 3
+#     - Venom: Let There Be Carnage
+#     - Godzilla vs. Kong
+#     - Shang-Chi and the Legend of the Ten Rings
+#     - Eternals
+# - lookup: movies_th
+  # examples: |
+  #   - สไปเดอร์แมน: โน เวย์ โฮม
+  #   - การต่อสู้ที่ทะเลสาบชางจิน
+  #   - 007 พยัคฆ์ร้ายฝ่าเวลามรณะ
+  #   - แก๊งม่วนป่วนโตเกียว
+  #   - เวน่อม ศึกอสูรแดงเดือด
+  #   - ก็อดซิลล่า ปะทะ คอง
+  #   - ชาง-ชี กับตำนานลับเท็นริงส์
+  #   - ฮีโร่พลังเทพเจ้า

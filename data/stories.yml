@@ -1,0 +1,52 @@
+version: "3.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet_th
+  - action: utter_greet_th
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet_th
+  - action: utter_greet_th
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm_th
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet_th
+  - action: utter_greet_th
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny_th
+  - action: utter_goodbye_th
+  
+- story: make will act
+  steps:
+  - intent: make_will
+  - action: utter_make_will_reply
+
+- story: inherit act
+  steps:
+  - intent: inherit
+  - action: utter_inherit_reply
+
+- story: accident act
+  steps:
+  - intent: accident
+  - action: utter_accident_reply
+  - intent: compensation
+  - action: utter_compensation_reply
+
+- story: unknown
+  steps:
+  - intent: unknown_ans
+  - action: utter_contact
