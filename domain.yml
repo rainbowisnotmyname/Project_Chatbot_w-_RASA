@@ -1,0 +1,101 @@
+version: "3.0"
+
+intents:
+  - greet_th
+  - goodbye_th
+  - affirm_th
+  - deny_th
+  - mood_great
+  - mood_unhappy
+  - bot_challenge_th
+  - contact
+  - FAQ
+  - make_will
+  - inherit
+  - accident
+  - compensation
+  - unknown_ans
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - ask_name
+  - ask_weather
+  - ask_name_th
+  - ask_weather_th
+  - ask_favcartoon_th
+  - ask_favmovie_th
+  - ask_favtvseries_th
+  - ask_reccartoon_th
+  - ask_recmovie_th
+  - ask_recseries_th
+  - ask_favcartoon
+  - ask_favmovie
+  - ask_favseries
+  - whatyoudoin
+  - whatyoudoin_th
+  - accomodation_enquiry
+  - accomodation_enquiry_th
+  - restaurant_enquiry
+  - restaurant_enquiry_th
+  - fav_movie
+
+entities:
+  - country_th
+  - country
+  - capitalcities
+  - capitalcities_th
+  - weekdays
+  - weekdays_th
+  - months
+  - months_th
+  - faculties
+  - faculties_th
+  - movies
+  - movies_th
+
+slot: {}
+
+
+responses:
+  utter_greet_th:
+  - text: "สวัสดี! วันนี้เป็นไงมั่ง"
+
+  utter_cheer_up:
+  - text: "ให้พี่ลี่ช่วยคุณ:"
+    image: "https://i.pinimg.com/564x/1b/89/75/1b897559c82e46c4978e225e71c3ab7e.jpg"
+
+  utter_did_that_help:
+  - text: "ดีขึ้นแล้วสินะ"
+
+  utter_happy:
+  - text: "ดีมากพวก ขอให้เป็นวันที่ดีไอหนุ่ม"
+
+  utter_goodbye_th:
+  - text: "ไว้เจอกัน บาย"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_contact:
+  - text: "ติดต่อเจ้าหน้าที่ 1506"
+
+  utter_make_will_reply:
+  - text: "ดาวน์โหลดเอกสาร \"แบบหนังสือระบุให้เป็นผู้มีสิทธิรับเงินสงเคราะห์กรณีตาย\" มาเขียนแบ่งมรดกได้มาเขียนแบ่งมรดกได้เลย\nเขียนเสร็จแล้วเก็บไว้เองหรือให้ผู้รับมรดกเก็บไว้ เมื่อคุณเสียชีวิตให้ผู้รับมรดก สามารถใช้เป็นหลักฐาน ในการแสดงตัวตนขอรับประโยชน์ทดแทนอย่างรวดเร็ว ถูกต้อง หรือไปที่สำนักงานเขตหรืออำเภอ เจ้าหน้าที่จะเก็บพินัยกรรมไว้ให้ และให้คุณเก็บไว้เองอีก 1 ฉบับ"
+
+  utter_inherit_reply:
+  - text: "ใน 1 ปี นับแต่วันที่เสียชีวิต ให้ผู้รับมรดก ไปยื่นเอกสารรับสิทธิ ณ สำนักงานประกันสังคมกรุงเทพมหานครพื้นที่/จังหวัดที่ท่านสะดวก เพื่อป้องกันปัญหาการแอบอ้างรับประโยชน์ทดแทน\nแต่ถ้าหลัง 1 ปีไม่มีผู้มาขอรับประโยชน์ทดแทน เงินส่วนนั้นจะตกเป็นของกองทุนประกันสังคมตามที่กฎหมายกำหนด"
+
+  utter_accident_reply:
+  - text: "เราเสียใจด้วยนะ แต่อย่าสิ้นหวัง เราอยู่ข้างคุณเสมอ\nกรณีสูญเสียอวัยวะบางส่วน จะได้รับเงินชดเชยหยุดงานเพิ่มเป็น 70% ของค่าจ้างรายเดือน เป็นระยะเวลาไม่เกิน 10 ปี"
+
+  utter_compensation_reply:
+  - text: "เงินต่ำสุด (คิดจากค่าจ้างวันละ 300 บาท) ที่จะได้รับคือ 5,460 บาท/เดือน เป็นเวลา 10 ปี เงินทดแทนรวมที่จะได้รับคือ 655,200 บาท\nเงินสูงสุด (คิดจากเงิน 20,000 บาท) ที่จะได้รับคือ 14,000 บาท/เดือน เป็นเวลา 10 ปี เงินทดแทนรวมที่จะได้รับคือ 1.68 ล้านบาท"
+
+  utter_goodbye:
+  - text: "Bye"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
